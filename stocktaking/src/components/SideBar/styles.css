@@ -1,0 +1,37 @@
+.Box {
+    width: 280px;
+    height: 100%;
+    background-color: #525151;
+    padding: 0px;
+    float: left;
+    display: 'flex';
+    flex-direction: 'column';
+    flex-grow: 1;
+  }
+
+  .List {
+    list-style-type: square;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Link {
+    text-decoration: none;
+    color: #383636;
+    color: #ffffff;
+  }
+
+  .Link:hover {
+    color: #ffffff;
+    background-color: #f0f0f0;
+  }
+
+.Divider{
+              border-color: '#2D3748';
+              margin-top: 3;
+            }
+
+            .Typography {
+              font-size: '10px';
+              font-weight: '600'
+            }
