@@ -13,12 +13,15 @@
     list-style-type: square;
     padding: 0;
     margin: 0;
+    display: 'flex';
+    flex-direction: 'column';
   }
 
   .Link {
     text-decoration: none;
     color: #383636;
     color: #ffffff;
+
   }
 
   .Link:hover {
@@ -32,6 +35,6 @@
             }
 
             .Typography {
-              font-size: '10px';
+              font-size: '8px';
               font-weight: '600'
             }

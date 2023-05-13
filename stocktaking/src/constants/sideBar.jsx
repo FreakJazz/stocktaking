@@ -16,19 +16,22 @@ export const Sections = [
         title: 'Descripción General',
         path: '/dashboard',
         icon: <Home className='Icons' fontSize="small" />,
-        chip: ''
+        chip: '',
+        children:  ''
       },
       {
         title: 'Analítica',
         path: '/dashboard/analytics',
         icon: <ChartBar className='Icons' fontSize="small" />,
-        chip: ''
+        chip: '',
+        children:  ''
       },
       {
         title: 'Logistica',
         path: '/dashboard/logistics',
         icon: <Truck className='Icons' fontSize="small" />,
-        chip: 'Nuevo'
+        chip: 'Nuevo',
+        children:  ''
       },
     ]
   },
@@ -43,17 +46,20 @@ export const Sections = [
           {
             title: 'List',
             path: '/dashboard/customers',
-            chip: ''
+            chip: '',
+            children:  ''
           },
           {
             title: 'Details',
             path: '/dashboard/customers/1',
-            chip: ''
+            chip: '',
+            children:  ''
           },
           {
             title: 'Edit',
             path: '/dashboard/customers/1/edit',
-            chip: ''
+            chip: '',
+            children:  ''
           }
         ],
         chip: ''
@@ -66,12 +72,14 @@ export const Sections = [
           {
             title: 'List',
             path: '/dashboard/products',
-            chip: ''
+            chip: '',
+            children:  ''
           },
           {
             title: 'Create',
             path: '/dashboard/products/new',
-            chip: ''
+            chip: '',
+            children:  ''
           }
         ],
         chip: ''
@@ -84,12 +92,14 @@ export const Sections = [
           {
             title: 'List',
             path: '/dashboard/orders',
-            chip: ''
+            chip: '',
+            children:  ''
           },
           {
             title: 'Details',
             path: '/dashboard/orders/1',
-            chip: ''
+            chip: '',
+            children:  ''
           }
         ],
         chip: ''
@@ -103,12 +113,14 @@ export const Sections = [
           {
             title: 'List',
             path: '/dashboard/invoices',
-            chip: ''
+            chip: '',
+            children:  ''
           },
           {
             title: 'Details',
             path: '/dashboard/invoices/1',
-            chip: ''
+            chip: '',
+            children:  ''
           }
         ]
       },
@@ -116,7 +128,8 @@ export const Sections = [
         title: 'Checkout',
         path: '/checkout',
         icon: <Cash className='Icons' fontSize="small" />,
-        chip: ''
+        chip: '',
+        children:  ''
       },
     ]
   },
