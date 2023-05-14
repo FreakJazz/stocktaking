@@ -1,11 +1,7 @@
 import {
   Box,
   Button,
-  Card,
-  CardActions,
-  CardContent,
   Container,
-  Divider,
   Grid,
   MenuItem,
   TextField,
@@ -13,7 +9,7 @@ import {
 } from '@mui/material';
 import { gtm } from '../../lib/gtm';
 
-const Overview = () => {
+const Analytics = () => {
   
   return (
     <>
@@ -81,8 +77,5 @@ const Overview = () => {
   );
 };
 
-Overview.getLayout = (page) => (
-      {page}
-);
 
-export default Overview;
+export default Analytics;

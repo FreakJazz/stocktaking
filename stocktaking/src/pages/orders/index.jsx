@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import { gtm } from '../../lib/gtm';
 
-const Logistics = () => {
+const Overview = () => {
   
   return (
     <>
@@ -81,8 +81,8 @@ const Logistics = () => {
   );
 };
 
-Logistics.getLayout = (page) => (
+Overview.getLayout = (page) => (
   {page}
 );
 
-export default Logistics;
+export default Overview;

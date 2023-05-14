@@ -14,21 +14,21 @@ export const Sections = [
     items: [
       {
         title: 'Descripción General',
-        path: '/dashboard',
+        path: '/',
         icon: <Home className='Icons' fontSize="small" />,
         chip: '',
         children:  ''
       },
       {
         title: 'Analítica',
-        path: '/dashboard/analytics',
+        path: '/analytics',
         icon: <ChartBar className='Icons' fontSize="small" />,
         chip: '',
         children:  ''
       },
       {
         title: 'Logistica',
-        path: '/dashboard/logistics',
+        path: '/logistics',
         icon: <Truck className='Icons' fontSize="small" />,
         chip: 'Nuevo',
         children:  ''
@@ -40,24 +40,24 @@ export const Sections = [
     items: [
       {
         title: 'Clientes',
-        path: '/dashboard/customers',
+        path: '/customers',
         icon: <Man className='Icons' fontSize="small" />,
         children: [
           {
             title: 'List',
-            path: '/dashboard/customers',
+            path: '/customers',
             chip: '',
             children:  ''
           },
           {
             title: 'Details',
-            path: '/dashboard/customers/1',
+            path: '/customers/1',
             chip: '',
             children:  ''
           },
           {
             title: 'Edit',
-            path: '/dashboard/customers/1/edit',
+            path: '/customers/1/edit',
             chip: '',
             children:  ''
           }
@@ -66,18 +66,18 @@ export const Sections = [
       },
       {
         title: 'Productos',
-        path: '/dashboard/products',
+        path: '/products',
         icon: <ShoppingBag className='Icons' fontSize="small" />,
         children: [
           {
             title: 'List',
-            path: '/dashboard/products',
+            path: '/products',
             chip: '',
             children:  ''
           },
           {
             title: 'Create',
-            path: '/dashboard/products/new',
+            path: '/products/new',
             chip: '',
             children:  ''
           }
@@ -87,17 +87,17 @@ export const Sections = [
       {
         title: 'Pedidos',
         icon: <ShoppingCart className='Icons' fontSize="small" />,
-        path: '/dashboard/orders',
+        path: '/orders',
         children: [
           {
             title: 'List',
-            path: '/dashboard/orders',
+            path: '/orders',
             chip: '',
             children:  ''
           },
           {
             title: 'Details',
-            path: '/dashboard/orders/1',
+            path: '/orders/1',
             chip: '',
             children:  ''
           }
@@ -106,7 +106,7 @@ export const Sections = [
       },
       {
         title: 'Facturas',
-        path: '/dashboard/invoices',
+        path: '/invoices',
         icon: <ReceiptTax className='Icons' fontSize="small" />,
         chip: '',
         children: [
@@ -118,7 +118,7 @@ export const Sections = [
           },
           {
             title: 'Details',
-            path: '/dashboard/invoices/1',
+            path: '/invoices/1',
             chip: '',
             children:  ''
           }
