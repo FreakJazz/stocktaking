@@ -13,19 +13,16 @@ const Analytics = () => {
   
   return (
     <>
-      <head>
-        <title>
-          Panel: General
-        </title>
-      </head>
+
       <Box
         component="main"
         sx={{
           flexGrow: 1,
-          py: 8
+          py: 8,
+          display:'flex'
         }}
       >
-        <Container maxWidth="xl">
+        <Container >
           <Box sx={{ mb: 4 }}>
             <Grid
               container

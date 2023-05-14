@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Box, Chip, Container, Divider, Typography } from '@mui/material';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -40,7 +40,8 @@ import './styles.css'
     }
   
     return (
-      <ListItemButton  className='Link' component="a" href={item.path}>
+      <Link to = {item.path}>
+      <ListItemButton  className='Link' >
         <ListItemIcon>{item.icon}</ListItemIcon>
         <ListItemText className="Typography" primary={item.title} />
         {
@@ -54,6 +55,7 @@ import './styles.css'
                                 size="small"
                               /> : null}
       </ListItemButton>
+      </Link>
     );
   }
   

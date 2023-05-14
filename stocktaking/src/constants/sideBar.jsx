@@ -14,7 +14,7 @@ export const Sections = [
     items: [
       {
         title: 'Descripción General',
-        path: '/',
+        path: '/overview',
         icon: <Home className='Icons' fontSize="small" />,
         chip: '',
         children:  ''

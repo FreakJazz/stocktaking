@@ -1,24 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
-  Box,
-  Button,
   Container,
-  Grid,
-  MenuItem,
-  TextField,
   Typography
 } from '@mui/material';
 
-export const Overview = () => {
+const Overview = () => {
   console.log("Entro al overview")
   return (
-    <>
+    <Container>
     <Typography variant="h4">
                   Good Morning
                 </Typography>
-                <img src="https://img.freepik.com/free-photo/cool-geometric-triangular-figure-neon-laser-light-great-backgrounds-wallpapers_181624-9331.jpg?w=2000"/>
      
-    </>
+    </Container>
   );
 };
 
+export default Overview;
