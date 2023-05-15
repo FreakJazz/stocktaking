@@ -1,4 +1,4 @@
-import { createTheme as createMuiTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme as createMuiTheme } from '@mui/material/styles';
 import { baseThemes } from './base-theme';
 import { ThemeOptions } from './colors';
 
