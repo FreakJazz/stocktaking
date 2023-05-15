@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/App.css';
+// import './styles/App.css';
 import { DashboardSidebar } from '../src/components/SideBar/index';
 import Overview from './pages/overview/index';
 import CustomerList  from './pages/customers/index';

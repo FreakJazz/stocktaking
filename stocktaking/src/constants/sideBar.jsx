@@ -17,15 +17,15 @@ export const Sections = [
         path: '/overview',
         icon: <Home className='Icons' fontSize="small" />,
         chip: '',
-        children:  ''
-      },
-      {
-        title: 'Analítica',
-        path: '/analytics',
-        icon: <ChartBar className='Icons' fontSize="small" />,
-        chip: '',
-        children:  ''
-      },
+        children:  ''},
+      // },
+      // {
+      //   title: 'Analítica',
+      //   path: '/analytics',
+      //   icon: <ChartBar className='Icons' fontSize="small" />,
+      //   chip: '',
+      //   children:  ''
+      // },
       {
         title: 'Logistica',
         path: '/logistics',

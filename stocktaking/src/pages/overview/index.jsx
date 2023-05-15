@@ -1,18 +1,16 @@
 import React from 'react';
-import {
-  Container,
-  Typography
-} from '@mui/material';
+import { Box } from '@mui/material';
+import { Morning }  from '../../components/Overview/Morning/index'
+import { OverviewBanner }  from '../../components/Overview/Banner/index'
+import { OverviewTotalBalance }  from '../../components/Overview/Balance/index'
 
 const Overview = () => {
-  console.log("Entro al overview")
   return (
-    <Container>
-    <Typography variant="h4">
-                  Good Morning
-                </Typography>
-     
-    </Container>
+<Box>
+  <Morning/>
+  <OverviewBanner/>
+  <OverviewTotalBalance/>
+</Box>
   );
 };
 
