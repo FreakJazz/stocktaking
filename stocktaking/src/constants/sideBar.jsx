@@ -44,20 +44,14 @@ export const Sections = [
         icon: <Man className='Icons' fontSize="small" />,
         children: [
           {
-            title: 'List',
+            title: 'Lista',
             path: '/customers',
             chip: '',
             children:  ''
           },
           {
-            title: 'Details',
+            title: 'Detalles',
             path: '/customers/1',
-            chip: '',
-            children:  ''
-          },
-          {
-            title: 'Edit',
-            path: '/customers/1/edit',
             chip: '',
             children:  ''
           }
@@ -70,13 +64,13 @@ export const Sections = [
         icon: <ShoppingBag className='Icons' fontSize="small" />,
         children: [
           {
-            title: 'List',
+            title: 'Lista',
             path: '/products',
             chip: '',
             children:  ''
           },
           {
-            title: 'Create',
+            title: 'Crear',
             path: '/products/new',
             chip: '',
             children:  ''
@@ -90,13 +84,13 @@ export const Sections = [
         path: '/orders',
         children: [
           {
-            title: 'List',
+            title: 'Lista',
             path: '/orders',
             chip: '',
             children:  ''
           },
           {
-            title: 'Details',
+            title: 'Detalles',
             path: '/orders/1',
             chip: '',
             children:  ''
@@ -111,13 +105,13 @@ export const Sections = [
         chip: '',
         children: [
           {
-            title: 'List',
+            title: 'Lista',
             path: '/dashboard/invoices',
             chip: '',
             children:  ''
           },
           {
-            title: 'Details',
+            title: 'Detalles',
             path: '/invoices/1',
             chip: '',
             children:  ''
