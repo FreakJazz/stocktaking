@@ -1,9 +1,8 @@
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import dynamic from 'next/dynamic';
 import PropTypes from 'prop-types';
 import { styled } from '@mui/material/styles';
 
-const Editor = dynamic(async () => {
+const Editor = (async () => {
   const m = await import('react-draft-wysiwyg');
   return m.Editor;
 }, { ssr: false });

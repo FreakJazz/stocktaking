@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation, useHistory } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -16,7 +17,7 @@ import {
   Typography
 } from '@mui/material';
 import { FileDropzone } from '../FileDropzone';
-import { QuillEditor } from '../DraftEditor';
+import { QuillEditor } from '../QuillEditor';
 
 const categoryOptions = [
   {
@@ -46,7 +47,9 @@ const categoryOptions = [
 ];
 
 export const ProductCreateForm = (props) => {
-  const router = useRouter();
+  const location = useLocation();
+  const history = useHistory();
+  const currentPath = location.pathname;
   const [files, setFiles] = useState([]);
   const formik = useFormik({
     initialValues: {
@@ -73,8 +76,8 @@ export const ProductCreateForm = (props) => {
     onSubmit: async (values, helpers) => {
       try {
         // NOTE: Make API request
-        toast.success('Product created!');
-        router.push('/dashboard/products').catch(console.error);
+        toast.success('Producto creado!');
+        history.push('/products').catch(console.error);
       } catch (err) {
         console.error(err);
         toast.error('Something went wrong!');

@@ -12,8 +12,8 @@ import {
   Tooltip,
   Typography
 } from '@mui/material';
-import { Duplicate as DuplicateIcon } from '../icons/duplicate';
-import { X as XIcon } from '../icons/x';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import ClearIcon from '@mui/icons-material/Clear';
 import { bytesToSize } from '../utils/bytes-to-size';
 
 export const FileDropzone = (props) => {
@@ -132,7 +132,7 @@ export const FileDropzone = (props) => {
                 }}
               >
                 <ListItemIcon>
-                  <DuplicateIcon fontSize="small" />
+                  <ContentCopyIcon fontSize="small" />
                 </ListItemIcon>
                 <ListItemText
                   primary={file.name}
@@ -147,7 +147,7 @@ export const FileDropzone = (props) => {
                     edge="end"
                     onClick={() => onRemove?.(file)}
                   >
-                    <XIcon fontSize="small" />
+                    <ClearIcon fontSize="small" />
                   </IconButton>
                 </Tooltip>
               </ListItem>

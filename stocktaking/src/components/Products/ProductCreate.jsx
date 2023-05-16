@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { Box, Breadcrumbs, Container, Typography } from '@mui/material';
 import { ProductCreateForm } from './ProductCreateForm';
 
-const ProductCreate = () => {
+export const ProductCreate = () => {
 
   return (
     <>
@@ -50,8 +50,3 @@ const ProductCreate = () => {
   );
 };
 
-ProductCreate.getLayout = (page) => (
-      {page}
-);
-
-export default ProductCreate;

@@ -51,7 +51,7 @@ const applyFilters = (products, filters) => products.filter((product) => {
 const applyPagination = (products, page, rowsPerPage) => products.slice(page * rowsPerPage,
   page * rowsPerPage + rowsPerPage);
 
-const ProductList = () => {
+export const ProductList = () => {
   const isMounted = useMounted();
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(0);
@@ -62,10 +62,6 @@ const ProductList = () => {
     status: [],
     inStock: undefined
   });
-
-  useEffect(() => {
-    gtm.push({ event: 'page_view' });
-  }, []);
 
   const getProducts = useCallback(async () => {
     try {
@@ -174,8 +170,3 @@ const ProductList = () => {
   );
 };
 
-ProductList.getLayout = (page) => (
-      {page}
-);
-
-export default ProductList;
