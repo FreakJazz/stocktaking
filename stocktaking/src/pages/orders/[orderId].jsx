@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Head from 'next/head';
 import { format } from 'date-fns';
 import { Box, Button, Container, Grid, Link, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -48,11 +47,6 @@ const OrderDetails = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Dashboard: Order Details | Material Kit Pro
-        </title>
-      </Head>
       <Box
         component="main"
         sx={{

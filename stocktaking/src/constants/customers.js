@@ -7,7 +7,7 @@ class CustomerApi {
     const customers = [
       {
         id: '5e887ac47eed253091be10cb',
-        avatar: '/public/mock-images/avatars/avatar-carson_darrin.png',
+        avatar: '/mock-images/avatars/avatar-carson_darrin.png',
         city: 'Cleveland',
         country: 'USA',
         currency: '$',
@@ -23,7 +23,7 @@ class CustomerApi {
       },
       {
         id: '5e887b209c28ac3dd97f6db5',
-        avatar: '/public/mock-images/avatars/avatar-fran_perez.png',
+        avatar: '/mock-images/avatars/avatar-fran_perez.png',
         city: 'Atlanta',
         country: 'USA',
         currency: '$',
@@ -39,7 +39,7 @@ class CustomerApi {
       },
       {
         id: '5e887b7602bdbc4dbb234b27',
-        avatar: '/public/mock-images/avatars/avatar-jie_yan_song.png',
+        avatar: '/mock-images/avatars/avatar-jie_yan_song.png',
         city: 'North Canton',
         country: 'USA',
         currency: '$',
@@ -55,7 +55,7 @@ class CustomerApi {
       },
       {
         id: '5e86809283e28b96d2d38537',
-        avatar: '/public/mock-images/avatars/avatar-anika_visser.png',
+        avatar: '/mock-images/avatars/avatar-anika_visser.png',
         city: 'Madrid',
         country: 'Spain',
         currency: '$',
@@ -71,7 +71,7 @@ class CustomerApi {
       },
       {
         id: '5e86805e2bafd54f66cc95c3',
-        avatar: '/public/mock-images/avatars/avatar-miron_vitold.png',
+        avatar: '/mock-images/avatars/avatar-miron_vitold.png',
         city: 'San Diego',
         country: 'USA',
         currency: '$',
@@ -87,7 +87,7 @@ class CustomerApi {
       },
       {
         id: '5e887a1fbefd7938eea9c981',
-        avatar: '/public/mock-images/avatars/avatar-penjani_inyene.png',
+        avatar: '/mock-images/avatars/avatar-penjani_inyene.png',
         city: 'Berkeley',
         country: 'USA',
         currency: '$',
@@ -103,7 +103,7 @@ class CustomerApi {
       },
       {
         id: '5e887d0b3d090c1b8f162003',
-        avatar: '/public/mock-images/avatars/avatar-omar_darboe.png',
+        avatar: '/mock-images/avatars/avatar-omar_darboe.png',
         currency: '$',
         email: 'omar.darobe@prueba.com',
         hasAcceptedMarketing: true,
@@ -119,7 +119,7 @@ class CustomerApi {
       },
       {
         id: '5e88792be2d4cfb4bf0971d9',
-        avatar: '/public/mock-images/avatars/avatar-siegbert_gottfried.png',
+        avatar: '/mock-images/avatars/avatar-siegbert_gottfried.png',
         city: 'Los Angeles',
         country: 'USA',
         currency: '$',
@@ -135,7 +135,7 @@ class CustomerApi {
       },
       {
         id: '5e8877da9a65442b11551975',
-        avatar: '/public/mock-images/avatars/avatar-iulia_albu.png',
+        avatar: '/mock-images/avatars/avatar-iulia_albu.png',
         city: 'Murray',
         country: 'USA',
         email: 'iulia.albu@prueba.com',
@@ -150,7 +150,7 @@ class CustomerApi {
       },
       {
         id: '5e8680e60cba5019c5ca6fda',
-        avatar: '/public/mock-images/avatars/avatar-nasimiyu_danai.png',
+        avatar: '/mock-images/avatars/avatar-nasimiyu_danai.png',
         city: 'Salt Lake City',
         country: 'USA',
         currency: '$',
@@ -174,7 +174,7 @@ class CustomerApi {
       id: '5e86805e2bafd54f66cc95c3',
       address1: 'Street John Wick, no. 7',
       address2: 'House #25',
-      avatar: '/public/mock-images/avatars/avatar-miron_vitold.png',
+      avatar: '/mock-images/avatars/avatar-miron_vitold.png',
       balance: 0,
       city: 'San Diego',
       country: 'USA',
@@ -197,12 +197,12 @@ class CustomerApi {
       {
         id: '5ece2ce3613486d95ffaea58',
         createdAt: subDays(subHours(subMinutes(now, 34), 5), 3).getTime(),
-        description: 'Order confirmation'
+        description: 'Confirmación del pedido'
       },
       {
         id: '5ece2ce8cebf7ad1d100c0cd',
         createdAt: subDays(subHours(subMinutes(now, 49), 11), 4).getTime(),
-        description: 'Order confirmation'
+        description: 'Confirmación del pedido'
       }
     ];
 
@@ -214,13 +214,13 @@ class CustomerApi {
       {
         id: '528651571NT',
         issueDate: now.getTime(),
-        status: 'paid',
+        status: 'Pagado',
         amount: 1358.75
       },
       {
         id: '311658671JR',
         issueDate: now.getTime(),
-        status: 'unpaid',
+        status: 'Pendiente',
         amount: 1451.75
       }
     ];
@@ -251,7 +251,7 @@ class CustomerApi {
       {
         id: '5ece2d08e2748e4e9788901a',
         createdAt: subDays(subMinutes(subSeconds(now, 23), 8), 2).getTime(),
-        description: 'Cart remove',
+        description: 'Removio del carrito',
         ip: '84.234.243.42',
         method: 'DELETE',
         route: '/api/products/d65654e/remove',

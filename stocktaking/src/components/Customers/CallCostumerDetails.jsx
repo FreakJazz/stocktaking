@@ -1,6 +1,6 @@
+import React from 'react';
 import { useCallback, useEffect, useState } from 'react';
-import NextLink from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 import {
   Avatar,
   Box,
@@ -9,39 +9,33 @@ import {
   Container,
   Divider,
   Grid,
-  Link,
   Tab,
   Tabs,
   Typography
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { customerApi } from '../../constants/customers';
-import { CustomerBasicDetails } from './CustomerDetails';
+import  CustomerBasicDetails  from './CustomerBasicDetails';
 import { CustomerDataManagement } from './CustomerDataManagement';
 import { CustomerEmailsSummary } from './CustomerEmailsSumary';
 import { CustomerInvoices } from './CustomerInvoices';
 import { CustomerPayment } from './CustomerPayment';
-import { CustomerLogs } from '../../../../components/dashboard/customer/customer-logs';
-import { useMounted } from '../../../../hooks/use-mounted';
-import { ChevronDown as ChevronDownIcon } from '../../../../icons/chevron-down';
-import { PencilAlt as PencilAltIcon } from '../../../../icons/pencil-alt';
-import { gtm } from '../../../../lib/gtm';
-import { getInitials } from '../../../../utils/get-initials';
+import { CustomerLogs } from './CustomerLogs';
+import { useMounted } from '../../hooks/useMounted';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ModeIcon from '@mui/icons-material/Mode';
+import { getInitials } from '../../utils/get-initials';
 
 const tabs = [
-  { label: 'Details', value: 'details' },
-  { label: 'Invoices', value: 'invoices' },
-  { label: 'Logs', value: 'logs' }
+  { label: 'Detalles', value: 'details' },
+  { label: 'Facturas', value: 'invoices' },
+  { label: 'Registros', value: 'logs' }
 ];
 
-const CustomerDetails = () => {
+export const CustomerDetails = () => {
   const isMounted = useMounted();
   const [customer, setCustomer] = useState(null);
   const [currentTab, setCurrentTab] = useState('details');
-
-  useEffect(() => {
-    gtm.push({ event: 'page_view' });
-  }, []);
 
   const getCustomer = useCallback(async () => {
     try {
@@ -71,42 +65,25 @@ const CustomerDetails = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Dashboard: Customer Details | Material Kit Pro
-        </title>
-      </Head>
       <Box
-        component="main"
-        sx={{
-          flexGrow: 1,
-          py: 8
-        }}
+        component="main" 
+        className='box'
       >
         <Container maxWidth="md">
           <div>
-            <Box sx={{ mb: 4 }}>
-              <NextLink
+            <Box className='box'>
+              <Link
                 href="/dashboard/customers"
                 passHref
               >
-                <Link
-                  color="textPrimary"
-                  component="a"
-                  sx={{
-                    alignItems: 'center',
-                    display: 'flex'
-                  }}
-                >
                   <ArrowBackIcon
                     fontSize="small"
-                    sx={{ mr: 1 }}
+                    
                   />
                   <Typography variant="subtitle2">
-                    Customers
+                    Clientes
                   </Typography>
-                </Link>
-              </NextLink>
+              </Link>
             </Box>
             <Grid
               container
@@ -142,7 +119,7 @@ const CustomerDetails = () => {
                     }}
                   >
                     <Typography variant="subtitle2">
-                      user_id:
+                      ID:
                     </Typography>
                     <Chip
                       label={customer.id}
@@ -156,29 +133,14 @@ const CustomerDetails = () => {
                 item
                 sx={{ m: -1 }}
               >
-                <NextLink
-                  href="/dashboard/customers/1/edit"
-                  passHref
-                >
-                  <Button
-                    component="a"
-                    endIcon={(
-                      <PencilAltIcon fontSize="small" />
-                    )}
-                    sx={{ m: 1 }}
-                    variant="outlined"
-                  >
-                    Edit
-                  </Button>
-                </NextLink>
                 <Button
                   endIcon={(
-                    <ChevronDownIcon fontSize="small" />
+                    <ExpandMoreIcon fontSize="small" />
                   )}
                   sx={{ m: 1 }}
                   variant="contained"
                 >
-                  Actions
+                  Acciones
                 </Button>
               </Grid>
             </Grid>
@@ -250,5 +212,5 @@ const CustomerDetails = () => {
   );
 };
 
-export default CustomerDetails;
+// export default CustomerDetails;
 

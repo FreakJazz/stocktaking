@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { DashboardSidebar } from '../src/components/SideBar/index';
 import Overview from './pages/overview/index';
 import CustomerList  from './pages/customers/index';
-import CustomersDetail  from './pages/customers/[customerId]/index';
+import CustomersDetail  from './pages/customers/customerId/index';
 import Analytics  from './pages/analytics/index';
 import Logistics  from './pages/logistics/index';
+import Products  from './pages/products/index';
+import CreateProduct  from './pages/products/new';
 import { Grid } from '@mui/material';
 
 
@@ -31,6 +33,10 @@ function App() {
             <Route key="/logistics" path="/logistics" element={<Logistics/>} />
             <Route key="/customers" path="/customers" element={<CustomerList/>} />
             <Route key="/customers/1" path="/customers/1" element={<CustomersDetail/>} />
+            <Route key="/products" path="/products" element={<Products/>} />
+            <Route key="/products/new" path="/products/new" element={<CreateProduct/>} />
+
+            
         </Routes>
 
               </Grid>

@@ -15,14 +15,14 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { customerApi } from '../../../__fake-api__/customer-api';
-import { useMounted } from '../../../hooks/use-mounted';
-import { ArrowRight as ArrowRightIcon } from '../../../icons/arrow-right';
+import { customerApi } from '../../constants/customers';
+import { useMounted } from '../../hooks/useMounted';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const emailOptions = [
-  'Resend last invoice',
-  'Send password reset',
-  'Send verification'
+  'Reenviar ultima factura',
+  'Enviar nueva contraseña',
+  'Enviar verificación'
 ];
 
 export const CustomerEmailsSummary = (props) => {
@@ -48,7 +48,7 @@ export const CustomerEmailsSummary = (props) => {
 
   return (
     <Card {...props}>
-      <CardHeader title="Emails" />
+      <CardHeader title="Correos" />
       <Divider />
       <CardContent>
         <TextField
@@ -73,7 +73,7 @@ export const CustomerEmailsSummary = (props) => {
         </TextField>
         <Box sx={{ mt: 2 }}>
           <Button
-            endIcon={<ArrowRightIcon fontSize="small" />}
+            endIcon={<ArrowRightAltIcon fontSize="small" />}
             variant="contained"
           >
             Enviar correo electrónico

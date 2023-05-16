@@ -1,54 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Card, CardActions, CardHeader, Divider, useMediaQuery } from '@mui/material';
-import { PropertyList } from '../../property-list';
-import { PropertyListItem } from '../../property-list-item';
+import { PropertyList } from '../Selectors/PropertyList';
+import { PropertyListItem } from '../Selectors/PropertyListItem';
 
-export const CustomerBasicDetails = (props) => {
+const CustomerBasicDetails = (props) => {
   const { address1, address2, country, email, isVerified, phone, state, ...other } = props;
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
-
-  const align = mdUp ? 'horizontal' : 'vertical';
 
   return (
     <Card {...other}>
-      <CardHeader title="Basic Details" />
+      <CardHeader title="Detalles Generales" />
       <Divider />
       <PropertyList>
         <PropertyListItem
-          align={align}
           divider
-          label="Email"
+          label="Correo electrónico"
           value={email}
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Phone"
+          label="Teléfono"
           value={phone}
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Country"
+          label="Pais"
           value={country}
         />
         <PropertyListItem
-          align={align}
           divider
-          label="State/Region"
+          label="Estado/Región"
           value={state}
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Address 1"
+          label="Dirección 1"
           value={state}
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Address 2"
+          label="Direccón 2"
           value={address2}
         />
       </PropertyList>
@@ -64,10 +55,10 @@ export const CustomerBasicDetails = (props) => {
           sx={{ m: 1 }}
           variant="outlined"
         >
-          Reset &amp; Send Password
+          Reiniciar &amp; Enviar la contraseña
         </Button>
         <Button sx={{ m: 1 }}>
-          Login as Customer
+          Ingreso como cliente
         </Button>
       </CardActions>
     </Card>
@@ -83,3 +74,5 @@ CustomerBasicDetails.propTypes = {
   phone: PropTypes.string,
   state: PropTypes.string
 };
+
+export default CustomerBasicDetails;

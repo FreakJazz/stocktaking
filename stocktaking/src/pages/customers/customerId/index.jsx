@@ -1,5 +1,5 @@
 import React from 'react';
-import { CustomerDetails } from '../../components/Customers/CallCostumersDetails'
+import { CustomerDetails } from '../../../components/Customers/CallCostumerDetails'
 
 const CustomersDetail = () => {
   

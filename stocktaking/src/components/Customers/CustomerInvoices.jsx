@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useCallback, useEffect, useState } from 'react';
-import NextLink from 'next/link';
+import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import {
   Card,
@@ -15,12 +15,12 @@ import {
   TablePagination,
   TableRow
 } from '@mui/material';
-import { customerApi } from '../../../__fake-api__/customer-api';
-import { useMounted } from '../../../hooks/use-mounted';
-import { ArrowRight as ArrowRightIcon } from '../../../icons/arrow-right';
-import { MoreMenu } from '../../more-menu';
-import { Scrollbar } from '../../scrollbar';
-import { SeverityPill } from '../../severity-pill';
+import { customerApi } from '../../constants/customers';
+import { useMounted } from '../../hooks/useMounted';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { MoreMenu } from '../Selectors/MoreMenu';
+import { Scrollbar } from '../ScrollBar/ScrollBar';
+import { SeverityPill } from '../SeverityPillRoot';
 
 export const CustomerInvoices = (props) => {
   const isMounted = useMounted();
@@ -46,7 +46,7 @@ export const CustomerInvoices = (props) => {
     <Card {...props}>
       <CardHeader
         action={<MoreMenu />}
-        title="Recent Invoices"
+        title="Facturas recientes"
       />
       <Divider />
       <Scrollbar>
@@ -57,16 +57,16 @@ export const CustomerInvoices = (props) => {
                 ID
               </TableCell>
               <TableCell>
-                Date
+                Fecha
               </TableCell>
               <TableCell>
                 Total
               </TableCell>
               <TableCell>
-                Status
+                Estado
               </TableCell>
               <TableCell align="right">
-                Actions
+                Acciones
               </TableCell>
             </TableRow>
           </TableHead>
@@ -84,19 +84,19 @@ export const CustomerInvoices = (props) => {
                   {invoice.amount}
                 </TableCell>
                 <TableCell>
-                  <SeverityPill color={invoice.status === 'paid' ? 'success' : 'error'}>
+                  <SeverityPill variant = 'outlined' color={invoice.status === 'Pagado' ? 'success' : 'error'}>
                     {invoice.status}
                   </SeverityPill>
                 </TableCell>
-                <TableCell align="right">
-                  <NextLink
+                <TableCell align="right"> 
+                  <Link
                     href="/dashboard/invoices/1"
                     passHref
                   >
                     <IconButton component="a">
-                      <ArrowRightIcon fontSize="small" />
+                      <ArrowRightAltIcon fontSize="small" />
                     </IconButton>
-                  </NextLink>
+                  </Link>
                 </TableCell>
               </TableRow>
             ))}

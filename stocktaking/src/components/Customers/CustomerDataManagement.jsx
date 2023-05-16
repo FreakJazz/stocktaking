@@ -3,7 +3,7 @@ import { Box, Button, Card, CardContent, CardHeader, Divider, Typography } from 
 
 export const CustomerDataManagement = (props) => (
   <Card {...props}>
-    <CardHeader title="Data Management" />
+    <CardHeader title="Gestión de datos" />
     <Divider />
     <CardContent>
       <Button

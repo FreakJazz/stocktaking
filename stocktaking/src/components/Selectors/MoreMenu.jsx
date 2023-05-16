@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { IconButton, ListItemIcon, ListItemText, Menu, MenuItem, Tooltip } from '@mui/material';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import ArticleIcon from '@mui/icons-material/Article';
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';;
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import DownloadIcon from '@mui/icons-material/Download';
 import FileCopyIcon from '@mui/icons-material/FileCopy';;
 

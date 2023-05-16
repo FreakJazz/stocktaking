@@ -13,9 +13,9 @@ import {
 } from '@mui/material';
 import { customerApi } from '../../constants/customers';
 import { useMounted } from '../../hooks/useMounted';
-import { MoreMenu } from '../../more-menu';
-import { Scrollbar } from '../../scrollbar';
-import { SeverityPill } from '../../severity-pill';
+import { MoreMenu } from '../Selectors/MoreMenu';
+import { Scrollbar } from '../ScrollBar/ScrollBar';
+import { SeverityPill } from '../SeverityPillRoot';
 
 export const CustomerLogs = (props) => {
   const isMounted = useMounted();
@@ -41,7 +41,7 @@ export const CustomerLogs = (props) => {
     <Card {...props}>
       <CardHeader
         action={<MoreMenu />}
-        title="Recent Logs"
+        title="Registros Recientes"
       />
       <Divider />
       <Scrollbar>

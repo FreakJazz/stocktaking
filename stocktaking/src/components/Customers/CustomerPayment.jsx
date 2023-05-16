@@ -1,57 +1,47 @@
 import React from "react";
-import { Button, Card, CardActions, CardHeader, Divider, useMediaQuery } from '@mui/material';
-import { PropertyList } from '../../property-list';
-import { PropertyListItem } from '../../property-list-item';
+import { Button, Card, CardActions, CardHeader, Divider } from '@mui/material';
+import { PropertyList } from '../Selectors/PropertyList';
+import { PropertyListItem } from '../Selectors/PropertyListItem';
 
 export const CustomerPayment = (props) => {
-  const mdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
-
-  const align = mdUp ? 'horizontal' : 'vertical';
 
   return (
     <Card {...props}>
-      <CardHeader title="Payment" />
+      <CardHeader title="Pago" />
       <Divider />
       <PropertyList>
         <PropertyListItem
-          align={align}
           divider
-          label="Credit Card"
+          label="Tarjeta de credito"
           value="**** **** **** **** 4142"
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Paid"
+          label="Pago"
           value="2 ($50.00)"
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Draft"
+          label="Servicio"
           value="1 ($5.00)"
         />
         <PropertyListItem
-          align={align}
           divider
-          label="State/Region"
+          label="Estado/Region"
           value="2 ($50.00)"
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Unpaid/Due"
+          label="Sin Pago"
           value="1 ($12.00)"
         />
         <PropertyListItem
-          align={align}
           divider
-          label="Refunded"
+          label="Reintegrado"
           value="0 ($0.00)"
         />
         <PropertyListItem
-          align={align}
-          label="Gross Income"
+          label="Ingresos brutos"
           value="$1,200.00"
         />
       </PropertyList>
@@ -68,10 +58,7 @@ export const CustomerPayment = (props) => {
           sx={{ m: 1 }}
           variant="outlined"
         >
-          Create Invoice
-        </Button>
-        <Button sx={{ m: 1 }}>
-          Resend Due Invoices
+          Crear Factura
         </Button>
       </CardActions>
     </Card>

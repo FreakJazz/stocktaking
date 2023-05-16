@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Head from 'next/head';
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer';
 import {
   Avatar,
@@ -10,7 +9,6 @@ import {
   Dialog,
   Divider,
   Grid,
-  Link,
   Typography
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -57,11 +55,6 @@ const InvoiceDetails = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          Dashboard: Invoice Details | Material Kit Pro
-        </title>
-      </Head>
       <Box
         component="main"
         sx={{
@@ -76,10 +69,6 @@ const InvoiceDetails = () => {
                 href="/dashboard/invoices"
                 passHref
               >
-                <Link
-                  color="textPrimary"
-                  variant="subtitle2"
-                >
                   <Box
                     sx={{
                       alignItems: 'center',
@@ -95,7 +84,6 @@ const InvoiceDetails = () => {
                     </Typography>
                   </Box>
                 </Link>
-              </Link>
             </Box>
             <Grid
               container
