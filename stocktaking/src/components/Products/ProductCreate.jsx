@@ -17,7 +17,7 @@ export const ProductCreate = () => {
         <Container maxWidth="md">
           <Box sx={{ mb: 3 }}>
             <Typography variant="h4">
-              Create a new product
+              Crear un nuevo producto
             </Typography>
             <Breadcrumbs
               separator="/"
@@ -27,19 +27,19 @@ export const ProductCreate = () => {
                 href="/dashboard"
                 passHref
               >
-                  Dashboard
+                  Principal
               </Link>
               <Link
                 href="/dashboard"
                 passHref
               >
-                  Management
+                  Gestión
                 </Link>
               <Typography
                 color="textSecondary"
                 variant="subtitle2"
               >
-                Products
+                Productos
               </Typography>
             </Breadcrumbs>
           </Box>

@@ -354,7 +354,7 @@ export const ProjectListFilters = (props) => {
               color="textSecondary"
               variant="subtitle2"
             >
-              No filters applied
+              No se han aplicado filtros
             </Typography>
           </Box>
         )}

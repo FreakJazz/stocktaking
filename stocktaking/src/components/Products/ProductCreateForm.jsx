@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
@@ -47,9 +47,7 @@ const categoryOptions = [
 ];
 
 export const ProductCreateForm = (props) => {
-  const location = useLocation();
-  const history = useHistory();
-  const currentPath = location.pathname;
+  const history = useNavigate();
   const [files, setFiles] = useState([]);
   const formik = useFormik({
     initialValues: {
@@ -116,7 +114,7 @@ export const ProductCreateForm = (props) => {
               xs={12}
             >
               <Typography variant="h6">
-                Basic details
+                Detalles  Básicos
               </Typography>
             </Grid>
             <Grid
@@ -128,28 +126,23 @@ export const ProductCreateForm = (props) => {
                 error={Boolean(formik.touched.name && formik.errors.name)}
                 fullWidth
                 helperText={formik.touched.name && formik.errors.name}
-                label="Product Name"
+                label="Nombre del producto"
                 name="name"
+                sx={{ mt: 2 }}
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
                 value={formik.values.name}
               />
-              <Typography
-                color="textSecondary"
-                sx={{
-                  mb: 2,
-                  mt: 3
-                }}
-                variant="subtitle2"
-              >
-                Description
-              </Typography>
-              <QuillEditor
-                onChange={(value) => {
-                  formik.setFieldValue('description', value);
-                }}
-                placeholder="Write something"
-                sx={{ height: 400 }}
+
+              <TextField
+                error={Boolean(formik.touched.description && formik.errors.description)}
+                fullWidth
+                helperText={formik.touched.description && formik.errors.description}
+                label="Descripción"
+                name="description"
+                sx={{ mt: 2 }}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
                 value={formik.values.description}
               />
               {Boolean(formik.touched.description && formik.errors.description) && (
@@ -175,14 +168,14 @@ export const ProductCreateForm = (props) => {
               xs={12}
             >
               <Typography variant="h6">
-                Images
+                Imagenes
               </Typography>
               <Typography
                 color="textSecondary"
                 variant="body2"
                 sx={{ mt: 1 }}
               >
-                Images will appear in the store front of your website.
+                Esta imagen aparecera en la parte frontal de la página
               </Typography>
             </Grid>
             <Grid
@@ -216,7 +209,7 @@ export const ProductCreateForm = (props) => {
               xs={6}
             >
               <Typography variant="h6">
-                Pricing
+                Precio
               </Typography>
             </Grid>
             <Grid
@@ -227,7 +220,7 @@ export const ProductCreateForm = (props) => {
               <TextField
                 error={Boolean(formik.touched.oldPrice && formik.errors.oldPrice)}
                 fullWidth
-                label="Old price"
+                label="Antiguo precio"
                 name="oldPrice"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
@@ -237,7 +230,7 @@ export const ProductCreateForm = (props) => {
               <TextField
                 error={Boolean(formik.touched.newPrice && formik.errors.newPrice)}
                 fullWidth
-                label="New Price"
+                label="Precio Actual"
                 name="newPrice"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
@@ -248,7 +241,7 @@ export const ProductCreateForm = (props) => {
               <Box sx={{ mt: 2 }}>
                 <FormControlLabel
                   control={<Switch />}
-                  label="Keep selling when stock is empty"
+                  label="Mantener ventas cuando no exista el producto"
                 />
               </Box>
             </Grid>
@@ -267,7 +260,7 @@ export const ProductCreateForm = (props) => {
               xs={12}
             >
               <Typography variant="h6">
-                Category
+                Categoría
               </Typography>
             </Grid>
             <Grid
@@ -337,20 +330,20 @@ export const ProductCreateForm = (props) => {
             mr: 'auto'
           }}
         >
-          Delete
+          Borrar
         </Button>
         <Button
           sx={{ m: 1 }}
           variant="outlined"
         >
-          Cancel
+          Cancelar
         </Button>
         <Button
           sx={{ m: 1 }}
           type="submit"
           variant="contained"
         >
-          Create
+          Crear
         </Button>
       </Box>
     </form>

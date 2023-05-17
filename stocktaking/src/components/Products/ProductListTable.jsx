@@ -31,27 +31,27 @@ import { SeverityPill } from '../SeverityPillRoot';
 
 const categoryOptions = [
   {
-    label: 'Healthcare',
+    label: 'Cuidado de la salud',
     value: 'healthcare'
   },
   {
-    label: 'Makeup',
+    label: 'Maquillaje',
     value: 'makeup'
   },
   {
-    label: 'Dress',
+    label: 'Vestidos',
     value: 'dress'
   },
   {
-    label: 'Skincare',
+    label: 'Protección de la piel',
     value: 'skincare'
   },
   {
-    label: 'Jewelry',
+    label: 'Joyas',
     value: 'jewelry'
   },
   {
-    label: 'Blouse',
+    label: 'Blusa',
     value: 'blouse'
   }
 ];
@@ -74,7 +74,7 @@ export const ProductListTable = (props) => {
 
   const handleUpdateProduct = () => {
     setOpenProduct(null);
-    toast.success('Product updated');
+    toast.success('Producto actualizado');
   };
 
   const handleCancelEdit = () => {
@@ -82,7 +82,7 @@ export const ProductListTable = (props) => {
   };
 
   const handleDeleteProduct = () => {
-    toast.error('Product cannot be deleted');
+    toast.error('El producto no se puede eliminar');
   };
 
   return (
@@ -93,22 +93,22 @@ export const ProductListTable = (props) => {
             <TableRow>
               <TableCell />
               <TableCell width="25%">
-                Name
+                Nombre
               </TableCell>
               <TableCell width="25%">
-                Stock
+                Cantidad
               </TableCell>
               <TableCell>
-                Price
+                Precio
               </TableCell>
               <TableCell>
-                sku
+                SKU
               </TableCell>
               <TableCell>
-                Status
+                Estado
               </TableCell>
               <TableCell align="right">
-                Actions
+                Acciones
               </TableCell>
             </TableRow>
           </TableHead>
@@ -199,7 +199,7 @@ export const ProductListTable = (props) => {
                             color="textSecondary"
                             variant="body2"
                           >
-                            in {product.category}
+                            en {product.category}
                           </Typography>
                         </Box>
                       </Box>
@@ -220,7 +220,7 @@ export const ProductListTable = (props) => {
                       >
                         {product.quantity}
                         {' '}
-                        in stock
+                        Cantidad
                         {product.variants > 1 && ` in ${product.variants} variants`}
                       </Typography>
                     </TableCell>
@@ -231,7 +231,7 @@ export const ProductListTable = (props) => {
                       {product.sku}
                     </TableCell>
                     <TableCell>
-                      <SeverityPill color={product.status === 'published' ? 'success' : 'info'}>
+                      <SeverityPill color={product.status === 'publicado' ? 'success' : 'info'}>
                         {product.status}
                       </SeverityPill>
                     </TableCell>
@@ -270,7 +270,7 @@ export const ProductListTable = (props) => {
                               xs={12}
                             >
                               <Typography variant="h6">
-                                Basic details
+                                Detalles básicos
                               </Typography>
                               <Divider sx={{ my: 2 }} />
                               <Grid
@@ -344,7 +344,7 @@ export const ProductListTable = (props) => {
                               xs={12}
                             >
                               <Typography variant="h6">
-                                Pricing and stocks
+                                Precios y cantidad
                               </Typography>
                               <Divider sx={{ my: 2 }} />
                               <Grid
@@ -402,7 +402,7 @@ export const ProductListTable = (props) => {
                                 >
                                   <Switch />
                                   <Typography variant="subtitle2">
-                                    Keep selling when stock is empty
+                                    Seguir vendiendo cuando las existencias estén vacías
                                   </Typography>
                                 </Grid>
                               </Grid>
@@ -424,14 +424,14 @@ export const ProductListTable = (props) => {
                             type="submit"
                             variant="contained"
                           >
-                            Update
+                            Actualizar
                           </Button>
                           <Button
                             onClick={handleCancelEdit}
                             sx={{ m: 1 }}
                             variant="outlined"
                           >
-                            Cancel
+                            Cancelar
                           </Button>
                           <Button
                             onClick={handleDeleteProduct}
@@ -441,7 +441,7 @@ export const ProductListTable = (props) => {
                               ml: 'auto'
                             }}
                           >
-                            Delete product
+                            Borrar productos
                           </Button>
                         </Box>
                       </TableCell>

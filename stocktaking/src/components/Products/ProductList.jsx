@@ -115,7 +115,7 @@ export const ProductList = () => {
             >
               <Grid item>
                 <Typography variant="h4">
-                  Products
+                  Productos
                 </Typography>
               </Grid>
               <Grid item>
@@ -128,7 +128,7 @@ export const ProductList = () => {
                     startIcon={<AddIcon fontSize="small" />}
                     variant="contained"
                   >
-                    Add
+                    Añadir
                   </Button>
                 </Link>
               </Grid>
@@ -143,13 +143,13 @@ export const ProductList = () => {
                 startIcon={<FileUploadIcon fontSize="small" />}
                 sx={{ m: 1 }}
               >
-                Import
+                Importar
               </Button>
               <Button
                 startIcon={<DownloadIcon fontSize="small" />}
                 sx={{ m: 1 }}
               >
-                Export
+                Exportar
               </Button>
             </Box>
           </Box>
