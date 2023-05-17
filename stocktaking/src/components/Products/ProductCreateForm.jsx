@@ -17,34 +17,7 @@ import {
   Typography
 } from '@mui/material';
 import { FileDropzone } from '../FileDropzone';
-import { QuillEditor } from '../QuillEditor';
-
-const categoryOptions = [
-  {
-    label: 'Healthcare',
-    value: 'healthcare'
-  },
-  {
-    label: 'Makeup',
-    value: 'makeup'
-  },
-  {
-    label: 'Dress',
-    value: 'dress'
-  },
-  {
-    label: 'Skincare',
-    value: 'skincare'
-  },
-  {
-    label: 'Jewelry',
-    value: 'jewelry'
-  },
-  {
-    label: 'Blouse',
-    value: 'blouse'
-  }
-];
+import {categoryOptions} from '../../constants/products'
 
 export const ProductCreateForm = (props) => {
   const history = useNavigate();
@@ -271,7 +244,7 @@ export const ProductCreateForm = (props) => {
               <TextField
                 error={Boolean(formik.touched.category && formik.errors.category)}
                 fullWidth
-                label="Category"
+                label="Categoría"
                 name="category"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
@@ -291,7 +264,7 @@ export const ProductCreateForm = (props) => {
                 disabled
                 error={Boolean(formik.touched.barcode && formik.errors.barcode)}
                 fullWidth
-                label="Barcode"
+                label="Código de barras"
                 name="barcode"
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}

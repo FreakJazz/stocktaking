@@ -9,12 +9,11 @@ import {
   Divider,
   TextField,
   Typography,
-  useMediaQuery
 } from '@mui/material';
 import { PropertyList } from '../Selectors/PropertyList';
 import { PropertyListItem } from '../Selectors/PropertyListItem';
 
-const statusOptions = ['Canceled', 'Complete', 'Rejected'];
+const statusOptions = ['Cancelado', 'Completado', 'Rechazado'];
 
 export const OrderSummary = (props) => {
   const { order, ...other } = props;
@@ -26,11 +25,11 @@ export const OrderSummary = (props) => {
 
   return (
     <Card {...other}>
-      <CardHeader title="Basic info" />
+      <CardHeader title="Información Básica" />
       <Divider />
       <PropertyList>
         <PropertyListItem
-          label="Customer"
+          label="Cliente"
         >
           <Typography
             color="primary"
@@ -64,27 +63,27 @@ export const OrderSummary = (props) => {
         />
         <Divider />
         <PropertyListItem
-          label="Invoice"
+          label="Factura"
           value={order.number}
         />
         <Divider />
         <PropertyListItem
-          label="Date"
+          label="Fecha"
           value={format(order.createdAt, 'dd/MM/yyyy HH:mm')}
         />
         <Divider />
         <PropertyListItem
-          label="Promotion Code"
+          label="Código de promoción"
           value={order.promotionCode}
         />
         <Divider />
         <PropertyListItem
-          label="Total Amount"
+          label="Cantidad total"
           value={`${order.currency}${order.totalAmount}`}
         />
         <Divider />
         <PropertyListItem
-          label="Status"
+          label="Estado"
         >
           <Box
             sx={{
@@ -100,7 +99,7 @@ export const OrderSummary = (props) => {
             }}
           >
             <TextField
-              label="Status"
+              label="Estado"
               margin="normal"
               name="status"
               onChange={handleChange}

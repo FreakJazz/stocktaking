@@ -15,7 +15,6 @@ import {
   TableRow,
   TextField,
   Typography,
-  useMediaQuery
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import EditIcon from '@mui/icons-material/Edit';
@@ -122,13 +121,13 @@ const OrderPreview = (props) => {
         <PropertyListItem
           align={align}
           disableGutters
-          label="Number"
+          label="Número"
           value={order.number}
         />
         <PropertyListItem
           align={align}
           disableGutters
-          label="Customer"
+          label="Cliente"
         >
           <Typography
             color="primary"
@@ -158,25 +157,25 @@ const OrderPreview = (props) => {
         <PropertyListItem
           align={align}
           disableGutters
-          label="Date"
+          label="Fecha"
           value={format(order.createdAt, 'dd/MM/yyyy HH:mm')}
         />
         <PropertyListItem
           align={align}
           disableGutters
-          label="Promotion Code"
+          label="Código de promoción"
           value={order.promotionCode}
         />
         <PropertyListItem
           align={align}
           disableGutters
-          label="Total Amount"
+          label="Cantidad total"
           value={`${order.currency}${order.totalAmount}`}
         />
         <PropertyListItem
           align={align}
           disableGutters
-          label="Status"
+          label="Estado"
           value={order.status}
         />
       </PropertyList>
@@ -297,7 +296,7 @@ const OrderForm = (props) => {
       <TextField
         disabled
         fullWidth
-        label="Number"
+        label="Número"
         margin="normal"
         name="number"
         value={order.number}
@@ -305,7 +304,7 @@ const OrderForm = (props) => {
       <TextField
         disabled
         fullWidth
-        label="Customer name"
+        label="Nombre del cliente"
         margin="normal"
         name="customer_name"
         value={order.customer.name}
@@ -313,14 +312,14 @@ const OrderForm = (props) => {
       <TextField
         disabled
         fullWidth
-        label="Date"
+        label="Fecha"
         margin="normal"
         name="date"
         value={format(order.createdAt, 'dd/MM/yyyy HH:mm')}
       />
       <TextField
         fullWidth
-        label="Address"
+        label="Dirección"
         margin="normal"
         name="address"
         value={order.customer.address1}

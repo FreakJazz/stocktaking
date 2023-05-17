@@ -28,33 +28,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import ImageIcon from '@mui/icons-material/Image';
 import { Scrollbar } from '../ScrollBar/ScrollBar';
 import { SeverityPill } from '../SeverityPillRoot';
-
-const categoryOptions = [
-  {
-    label: 'Cuidado de la salud',
-    value: 'healthcare'
-  },
-  {
-    label: 'Maquillaje',
-    value: 'makeup'
-  },
-  {
-    label: 'Vestidos',
-    value: 'dress'
-  },
-  {
-    label: 'Protección de la piel',
-    value: 'skincare'
-  },
-  {
-    label: 'Joyas',
-    value: 'jewelry'
-  },
-  {
-    label: 'Blusa',
-    value: 'blouse'
-  }
-];
+import {categoryOptions} from '../../constants/products'
 
 export const ProductListTable = (props) => {
   const {
@@ -285,7 +259,7 @@ export const ProductListTable = (props) => {
                                   <TextField
                                     defaultValue={product.name}
                                     fullWidth
-                                    label="Product name"
+                                    label="Nombre del producto"
                                     name="name"
                                   />
                                 </Grid>
@@ -310,7 +284,7 @@ export const ProductListTable = (props) => {
                                   <TextField
                                     defaultValue={product.category}
                                     fullWidth
-                                    label="Category"
+                                    label="Categoría"
                                     select
                                   >
                                     {categoryOptions.map((option) => (
@@ -332,7 +306,7 @@ export const ProductListTable = (props) => {
                                     defaultValue={product.id}
                                     disabled
                                     fullWidth
-                                    label="Barcode"
+                                    label="Código de barras"
                                     name="barcode"
                                   />
                                 </Grid>
@@ -359,7 +333,7 @@ export const ProductListTable = (props) => {
                                   <TextField
                                     defaultValue={product.price}
                                     fullWidth
-                                    label="Old price"
+                                    label="Precio anterior"
                                     name="old-price"
                                     InputProps={{
                                       startAdornment: (
@@ -379,7 +353,7 @@ export const ProductListTable = (props) => {
                                   <TextField
                                     defaultValue={product.price}
                                     fullWidth
-                                    label="New price"
+                                    label="Nuevo precio"
                                     name="new-price"
                                     InputProps={{
                                       startAdornment: (

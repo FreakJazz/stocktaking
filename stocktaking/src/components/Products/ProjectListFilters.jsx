@@ -5,59 +5,7 @@ import { Box, Chip, Divider, Input, Typography } from '@mui/material';
 import { useUpdateEffect } from '../../hooks/useUpdateEffect';
 import SearchIcon from '@mui/icons-material/Search';
 import { MultiSelect } from '../Selectors/MultiSelect';
-
-const categoryOptions = [
-  {
-    label: 'Healthcare',
-    value: 'healthcare'
-  },
-  {
-    label: 'Makeup',
-    value: 'makeup'
-  },
-  {
-    label: 'Dress',
-    value: 'dress'
-  },
-  {
-    label: 'Skincare',
-    value: 'skincare'
-  },
-  {
-    label: 'Jewelry',
-    value: 'jewelry'
-  },
-  {
-    label: 'Blouse',
-    value: 'blouse'
-  }
-];
-
-const statusOptions = [
-  {
-    label: 'Published',
-    value: 'published'
-  },
-  {
-    label: 'Draft',
-    value: 'draft'
-  }
-];
-
-const stockOptions = [
-  {
-    label: 'All',
-    value: 'all'
-  },
-  {
-    label: 'Available',
-    value: 'available'
-  },
-  {
-    label: 'Out of Stock',
-    value: 'outOfStock'
-  }
-];
+import {categoryOptions, statusOptions, stockOptions} from '../../constants/products'
 
 export const ProjectListFilters = (props) => {
   const { onChange, ...other } = props;
@@ -172,7 +120,7 @@ export const ProjectListFilters = (props) => {
           const option = categoryOptions.find((option) => option.value === value);
 
           newFilterItems.push({
-            label: 'Category',
+            label: 'Categoría',
             field: 'category',
             value,
             displayValue: option.label
@@ -213,7 +161,7 @@ export const ProjectListFilters = (props) => {
           const option = statusOptions.find((option) => option.value === value);
 
           newFilterItems.push({
-            label: 'Status',
+            label: 'Estado',
             field: 'status',
             value,
             displayValue: option.label
@@ -368,13 +316,13 @@ export const ProjectListFilters = (props) => {
         }}
       >
         <MultiSelect
-          label="Category"
+          label="Categoría"
           onChange={handleCategoryChange}
           options={categoryOptions}
           value={categoryValues}
         />
         <MultiSelect
-          label="Status"
+          label="Estado"
           onChange={handleStatusChange}
           options={statusOptions}
           value={statusValues}

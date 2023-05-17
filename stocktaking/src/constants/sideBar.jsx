@@ -1,5 +1,4 @@
 import Cash  from '@mui/icons-material/Money';
-import ChartBar from '@mui/icons-material/BarChart';
 import Home from '@mui/icons-material/Home';
 import ReceiptTax from '@mui/icons-material/Receipt';
 import ShoppingBag from '@mui/icons-material/ShoppingBag';
@@ -98,33 +97,33 @@ export const Sections = [
         ],
         chip: ''
       },
-      {
-        title: 'Facturas',
-        path: '/invoices',
-        icon: <ReceiptTax className='Icons' fontSize="small" />,
-        chip: '',
-        children: [
-          {
-            title: 'Lista',
-            path: '/dashboard/invoices',
-            chip: '',
-            children:  ''
-          },
-          {
-            title: 'Detalles',
-            path: '/invoices/1',
-            chip: '',
-            children:  ''
-          }
-        ]
-      },
-      {
-        title: 'Checkout',
-        path: '/checkout',
-        icon: <Cash className='Icons' fontSize="small" />,
-        chip: '',
-        children:  ''
-      },
+      // {
+      //   title: 'Facturas',
+      //   path: '/invoices',
+      //   icon: <ReceiptTax className='Icons' fontSize="small" />,
+      //   chip: '',
+      //   children: [
+      //     {
+      //       title: 'Lista',
+      //       path: '/dashboard/invoices',
+      //       chip: '',
+      //       children:  ''
+      //     },
+      //     {
+      //       title: 'Detalles',
+      //       path: '/invoices/1',
+      //       chip: '',
+      //       children:  ''
+      //     }
+      //   ]
+      // },
+      // {
+      //   title: 'Checkout',
+      //   path: '/checkout',
+      //   icon: <Cash className='Icons' fontSize="small" />,
+      //   chip: '',
+      //   children:  ''
+      // },
     ]
   },
 
