@@ -1,27 +1,20 @@
-import { useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Link} from 'react-router-dom';
 import { format } from 'date-fns';
-import { Box, Button, Container, Grid, Link, Typography } from '@mui/material';
+import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { orderApi } from '../../../__fake-api__/order-api';
-import { AuthGuard } from '../../../components/authentication/auth-guard';
-import { DashboardLayout } from '../../../components/dashboard/dashboard-layout';
-import { OrderItems } from '../../../components/dashboard/order/order-items';
-import { OrderLogs } from '../../../components/dashboard/order/order-logs';
-import { OrderSummary } from '../../../components/dashboard/order/order-summary';
-import { useMounted } from '../../../hooks/use-mounted';
-import { Calendar as CalendarIcon } from '../../../icons/calendar';
-import { ChevronDown as ChevronDownIcon } from '../../../icons/chevron-down';
-import { PencilAlt as PencilAltIcon } from '../../../icons/pencil-alt';
-import { gtm } from '../../../lib/gtm';
+import { orderApi } from '../../constants/orders';
+import { OrderItems } from './OrderItems';
+import { OrderLogs } from './OrderLogs';
+import { OrderSummary } from './OrderSummary';
+import { useMounted } from '../../hooks/useMounted';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CreateIcon from '@mui/icons-material/Create';
 
-const OrderDetails = () => {
+export const OrderDetails = () => {
   const isMounted = useMounted();
   const [order, setOrder] = useState(null);
-
-  useEffect(() => {
-    gtm.push({ event: 'page_view' });
-  }, []);
 
   const getOrder = useCallback(async () => {
     try {
@@ -57,26 +50,17 @@ const OrderDetails = () => {
         <Container maxWidth="md">
           <Box sx={{ mb: 4 }}>
             <Link
-              href="/dashboard/orders"
+              href="orders"
               passHref
             >
-              <Link
-                color="textPrimary"
-                component="a"
-                sx={{
-                  alignItems: 'center',
-                  display: 'flex'
-                }}
-              >
                 <ArrowBackIcon
                   fontSize="small"
                   sx={{ mr: 1 }}
                 />
                 <Typography variant="subtitle2">
-                  Orders
+                  Ordenes
                 </Typography>
               </Link>
-            </Link>
           </Box>
           <Box sx={{ mb: 4 }}>
             <Grid
@@ -101,9 +85,9 @@ const OrderDetails = () => {
                     variant="body2"
                     sx={{ ml: 1 }}
                   >
-                    Placed on
+                    Colocado en
                   </Typography>
-                  <CalendarIcon
+                  <CalendarMonthIcon
                     color="action"
                     fontSize="small"
                     sx={{ ml: 1 }}
@@ -122,21 +106,21 @@ const OrderDetails = () => {
               >
                 <Button
                   endIcon={(
-                    <PencilAltIcon fontSize="small" />
+                    <CreateIcon fontSize="small" />
                   )}
                   variant="outlined"
                   sx={{ ml: 2 }}
                 >
-                  Edit
+                  Editar
                 </Button>
                 <Button
                   endIcon={(
-                    <ChevronDownIcon fontSize="small" />
+                    <ExpandMoreIcon fontSize="small" />
                   )}
                   variant="contained"
                   sx={{ ml: 2 }}
                 >
-                  Action
+                  Acciones
                 </Button>
               </Grid>
             </Grid>
@@ -153,14 +137,3 @@ const OrderDetails = () => {
     </>
   );
 };
-
-OrderDetails.getLayout = (page) => (
-  <AuthGuard>
-    <DashboardLayout>
-      {page}
-    </DashboardLayout>
-  </AuthGuard>
-);
-
-export default OrderDetails;
-

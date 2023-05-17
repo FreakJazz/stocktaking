@@ -304,7 +304,7 @@ export const ProjectListFilters = (props) => {
             fullWidth
             onChange={handleQueryChange}
             onKeyUp={handleQueryKeyup}
-            placeholder="Search by product name"
+            placeholder="Buscar por nombre de producto"
             value={queryValue}
           />
         </Box>
